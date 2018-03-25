@@ -1,0 +1,12 @@
+image: rambabusaravanan/firebase
+
+stages:
+  - deploy
+
+deploy-prod:
+  stage: deploy
+  only:
+    - master
+  script:
+    - firebase use hallowed-moment-154010 --token 4/AABdTnpyMwfZbWj8KkTr-pb0ZmgOuRiutnRee_dC_y_UlYUOCORe2MI
+    - firebase deploy --only hosting --token 4/AABdTnpyMwfZbWj8KkTr-pb0ZmgOuRiutnRee_dC_y_UlYUOCORe2MI
